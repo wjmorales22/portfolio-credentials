@@ -1,42 +1,94 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App.css */
+
+.app {
+  min-height: 100vh;
+  padding: 64px 24px;
+  background-color: #0f172a;
+}
+
+/* Header */
+
+.header {
+  max-width: 900px;
+  margin: 0 auto 56px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #f8fafc;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Grid */
+
+.grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
 }
+
+/* Card */
 
 .card {
-  padding: 2em;
+  position: relative;
+  background: #020617;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.65);
+}
+
+/* Badge */
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #2563eb;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* Card content */
+
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+  color: #f1f5f9;
+}
+
+/* Button */
+
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 10px;
+  background-color: #2563eb;
+  color: white;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.card a:hover {
+  background-color: #3b82f6;
+  transform: translateY(-1px);
 }
