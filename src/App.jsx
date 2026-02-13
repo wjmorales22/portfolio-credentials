@@ -1,3 +1,4 @@
+// App.jsx
 import './App.css';
 import { certificados } from './data';
 
@@ -12,19 +13,30 @@ function App() {
       </header>
 
       <section className="grid">
-        {certificados.map(c => (
+        {certificados.map((c) => (
           <article key={c.id} className="card">
             <span className="badge">ATESTADO</span>
+            
+            {/* Contenedor de la imagen */}
+            <div className="card-image">
+              <img 
+                src={c.thumbnail} 
+                alt={`Miniatura de ${c.titulo}`} 
+                loading="lazy"
+              />
+            </div>
 
-            <h3>{c.titulo}</h3>
-
-            <a
-              href={c.link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              📄 Ver documento
-            </a>
+            <div className="card-content">
+              <h3>{c.titulo}</h3>
+              <a
+                href={c.link}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-view"
+              >
+                📄 Ver documento
+              </a>
+            </div>
           </article>
         ))}
       </section>
