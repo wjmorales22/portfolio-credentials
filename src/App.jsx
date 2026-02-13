@@ -27,7 +27,8 @@ function App() {
             </div>
 
             <div className="card-content">
-              <h3>{c.titulo}</h3>
+              <h2>{c.titulo}</h2>
+              <p>{c.tags.join(', ')}</p>
               <a
                 href={c.link}
                 target="_blank"
