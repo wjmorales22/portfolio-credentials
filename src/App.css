@@ -1,13 +1,39 @@
 /* App.css */
 
+:root {
+  /* Variables Modo Claro (Default) */
+  --bg-app: #f8fafc;
+  --bg-card: #ffffff;
+  --text-title: #0f172a;
+  --text-subtitle: #475569;
+  --text-card-h3: #1e293b;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.15);
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Variables Modo Oscuro */
+    --bg-app: #0f172a;
+    --bg-card: #020617;
+    --text-title: #f8fafc;
+    --text-subtitle: #94a3b8;
+    --text-card-h3: #f1f5f9;
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.65);
+  }
+}
+
 .app {
   min-height: 100vh;
   padding: 64px 24px;
-  background-color: #0f172a;
+  background-color: var(--bg-app);
+  transition: background-color 0.3s ease;
 }
 
 /* Header */
-
 .header {
   max-width: 900px;
   margin: 0 auto 56px;
@@ -18,16 +44,15 @@
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #f8fafc;
+  color: var(--text-title);
 }
 
 .subtitle {
   font-size: 1.05rem;
-  color: #94a3b8;
+  color: var(--text-subtitle);
 }
 
 /* Grid */
-
 .grid {
   max-width: 1100px;
   margin: 0 auto;
@@ -37,23 +62,21 @@
 }
 
 /* Card */
-
 .card {
   position: relative;
-  background: #020617;
+  background: var(--bg-card);
   border-radius: 16px;
   padding: 28px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.65);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Badge */
-
 .badge {
   position: absolute;
   top: 20px;
@@ -61,34 +84,32 @@
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 1px;
-  background-color: #2563eb;
+  background-color: var(--accent);
   color: white;
   padding: 4px 10px;
   border-radius: 999px;
 }
 
 /* Card content */
-
 .card h3 {
   font-size: 1.15rem;
   margin-bottom: 22px;
-  color: #f1f5f9;
+  color: var(--text-card-h3);
 }
 
 /* Button */
-
 .card a {
   display: inline-block;
   text-decoration: none;
   font-weight: 600;
   padding: 10px 18px;
   border-radius: 10px;
-  background-color: #2563eb;
+  background-color: var(--accent);
   color: white;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .card a:hover {
-  background-color: #3b82f6;
+  background-color: var(--accent-hover);
   transform: translateY(-1px);
 }
