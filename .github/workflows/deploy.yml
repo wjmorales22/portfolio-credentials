@@ -1,0 +1,35 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main  # Se activa al hacer push a la rama main 
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar y Construir
+        run: |
+          npm install
+          npm run build
+
+      - name: Desplegar al Repositorio de GitHub Pages
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_TOKEN }}
+        with:
+          source-directory: 'dist'
+          destination-github-username: 'wjmorales22'
+          destination-repository-name: 'wjmorales22.github.io'
+          user-email: 'wjmoralesr.22@gmail.com'
+          target-branch: 'main'
