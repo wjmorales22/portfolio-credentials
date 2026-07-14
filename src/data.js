@@ -74,7 +74,7 @@ export const certificados = [
   },
   { 
     id: 10, 
-    titulo: "Cloud Skills CHallenge", 
+    titulo: "Cloud Skills Challenge", 
     link: "/assets/docs/Cloud-Skills.pdf",
     thumbnail: "/assets/thumbnails/Cloud-Skills.webp",
     type: "CERTIFICACIÓN",
@@ -95,5 +95,13 @@ export const certificados = [
     thumbnail: "/assets/thumbnails/dlp.webp",
     type: "CURSO",
     tags: ["Seguridad de la Información", "DLP", "Protección de Datos", "Cumplimiento"]
+  },
+  { 
+    id: 13, 
+    titulo: "Curso de Seguridad de Redes On-Premise", 
+    link: "/assets/docs/redes-on-premise.pdf",
+    thumbnail: "/assets/thumbnails/redes-on-premise.webp",
+    type: "CURSO",
+    tags: ["CIS CONTROLS", "Segmentacion de redes y VPN", "Port Security", "NIST 800-41"]
   },
 ];
