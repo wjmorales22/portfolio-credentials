@@ -104,4 +104,44 @@ export const certificados = [
     type: "CURSO",
     tags: ["CIS CONTROLS", "Segmentacion de redes y VPN", "Port Security", "NIST 800-41"]
   },
+  { 
+    id: 14, 
+    titulo: "MongoDB Operations: Insert and Find Documents", 
+    link: "/assets/docs/Insert-and-Find-Documents.pdf",
+    thumbnail: "/assets/thumbnails/Insert-and-Find-Documents.webp",
+    type: "CURSO", 
+    tags: ["MongoDB", "NoSQL", "Bases de Datos", "CRUD", "Querying"]
+  },
+  { 
+    id: 15, 
+    titulo: "MongoDB Operations: Modifying Query Results", 
+    link: "/assets/docs/Modifying-Query-Results.pdf",
+    thumbnail: "/assets/thumbnails/Modifying-Query-Results.webp",
+    type: "CURSO", 
+    tags: ["MongoDB", "NoSQL", "Sorting", "Pagination", "Projection"]
+  },
+  { 
+    id: 16, 
+    titulo: "MongoDB Operations: Replace and Delete Documents", 
+    link: "/assets/docs/Replace-and-Delete-Documents.pdf",
+    thumbnail: "/assets/thumbnails/Replace-and-Delete-Documents.webp",
+    type: "CURSO", 
+    tags: ["MongoDB", "NoSQL", "Bases de Datos", "CRUD", "Data Manipulation"]
+  },
+  { 
+    id: 17, 
+    titulo: "MongoDB Indexes", 
+    link: "/assets/docs/MongoDB-Indexes.pdf",
+    thumbnail: "/assets/thumbnails/MongoDB-Indexes.webp",
+    type: "CURSO", 
+    tags: ["MongoDB", "NoSQL", "Indexing", "Performance", "Query Optimization"]
+  },
+  { 
+    id: 18, 
+    titulo: "MongoDB Transactions", 
+    link: "/assets/docs/MongoDB-Transactions.pdf",
+    thumbnail: "/assets/thumbnails/MongoDB-Transactions.webp",
+    type: "CURSO", 
+    tags: ["MongoDB", "NoSQL", "ACID", "Transactions", "Data Consistency"]
+  },
 ];
